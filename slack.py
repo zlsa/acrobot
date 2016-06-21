@@ -81,7 +81,9 @@ class SlackInterface(interface.Interface):
     if not user['ok']:
       return False
 
-    if 'user' not in user:
+    print(user)
+
+    if 'user' in user:
       user = user['user']
 
     if user['is_bot']: return
